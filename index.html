@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jam Sederhana</title>
+  <link rel="stylesheet" href="style.css" />
+
+ </head>
+ <body>
+  <div class="container">
+   <div class="nav-buttons">
+    <button onclick="showJam()">JAM</button>
+    <button onclick="showTimer()">TIMER</button>
+    <button onclick="showCalendar()">KALENDER</button>
+   </div>
+
+   <!-- Analog Clock -->
+   <div id="analog" class="clock-view">
+    <div class="clock">
+     <!-- Numbers -->
+     <div class="number" style="--n: 1">1</div>
+     <div class="number" style="--n: 2">2</div>
+     <div class="number" style="--n: 3">3</div>
+     <div class="number" style="--n: 4">4</div>
+     <div class="number" style="--n: 5">5</div>
+     <div class="number" style="--n: 6">6</div>
+     <div class="number" style="--n: 7">7</div>
+     <div class="number" style="--n: 8">8</div>
+     <div class="number" style="--n: 9">9</div>
+     <div class="number" style="--n: 10">10</div>
+     <div class="number" style="--n: 11">11</div>
+     <div class="number" style="--n: 12">12</div>
+
+     <!-- Hands -->
+     <div class="hand hour" id="hour"></div>
+     <div class="hand minute" id="minute"></div>
+     <div class="hand second" id="second"></div>
+     <div class="center-circle"></div>
+    </div>
+   </div>
+
+   <!-- Digital Clock -->
+   <div id="digital" class="clock-view hidden">
+    <div class="digital-clock" id="digitalTime">00:00:00</div>
+   </div>
+
+   <!-- Calendar -->
+   <div id="calendar" class="clock-view hidden">
+    <div id="calendarContainer">
+     <div class="calendar-nav">
+      <button id="prevMonth">←</button>
+      <span id="monthYear"></span>
+      <button id="nextMonth">→</button>
+     </div>
+     <div id="calendarBody"></div>
+    </div>
+   </div>
+
+   <!-- Timer -->
+   <div id="timer" class="hidden text-center mt-8">
+    <div id="timerDisplay" class="text-4xl font-bold mb-4">00:00</div>
+  
+    <div class="mb-4">
+      <input id="minuteInput" type="number" min="0" placeholder="Menit" class="border p-2 w-20 text-center">
+      <input id="secondInput" type="number" min="0" placeholder="Detik" class="border p-2 w-20 text-center">
+    </div>
+  
+    <div class="space-x-2">
+      <button onclick="startTimer()" class="bg-green-500 text-white px-4 py-2 rounded">Mulai</button>
+      <button onclick="pauseTimer()" class="bg-yellow-500 text-white px-4 py-2 rounded">Jeda</button>
+      <button onclick="resetTimer()" class="bg-red-500 text-white px-4 py-2 rounded">Reset</button>
+    </div>
+  </div>
+  
+
+   <!-- Switch Buttons (Analog / Digital) -->
+   <div class="switch-buttons hidden" id="switchButtons">
+    <button onclick="showAnalog()">ANALOG</button>
+    <button onclick="showDigital()">DIGITAL</button>
+   </div>
+  </div>
+
+  <script src="script.js"></script>
+ </body>
+</html>

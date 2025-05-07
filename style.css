@@ -1,0 +1,186 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+
+}
+
+.nav-buttons button,
+.switch-buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* JAM */
+
+.clock-view {
+  margin: 30px 0;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  border: 10px solid #333;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.number {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--n))) translateY(-130px) rotate(calc(-30deg * var(--n)));
+  top: 47%;
+  left: 45%;
+  transform-origin: center center;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translateX(-50%);
+  background: #000;
+}
+
+.hand.hour {
+  width: 8px;
+  height: 70px;
+  background: #333;
+}
+
+.hand.minute {
+  width: 6px;
+  height: 100px;
+  background: #666;
+}
+
+.hand.second {
+  width: 2px;
+  height: 120px;
+  background: red;
+}
+
+.center-circle {
+  width: 14px;
+  height: 14px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.digital-clock {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+/* kalender */
+
+.calendar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+#monthYear {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.calendar-table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.calendar-table th,
+.calendar-table td {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.calendar-cell.today {
+  background-color: blue;
+  color: white;
+  border-radius: 50%;
+}
+
+
+/* TIMER CONTAINER */
+#timer {
+  /* background-color: #f9fafb; */
+  /* padding: 2rem; */
+  /* border-radius: 1rem; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  max-width: 320px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* DISPLAY TIMER */
+#timerDisplay {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1f2937; /* dark gray */
+  margin-bottom: 1.5rem;
+}
+
+/* INPUT FIELD */
+#timer input[type="number"] {
+  width: 70px;
+  padding: 0.5rem;
+  margin: 0 0.25rem;
+  font-size: 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+#timer input[type="number"]:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+/* BUTTONS */
+#timer button {
+  padding: 0.5rem 1.25rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#timer button:hover {
+  filter: brightness(1.1);
+}
+
+#timer button:nth-child(1) { background-color: #10b981; color: white; }  /* Start */
+#timer button:nth-child(2) { background-color: #f59e0b; color: white; }  /* Pause */
+#timer button:nth-child(3) { background-color: #ef4444; color: white; }  /* Reset */
