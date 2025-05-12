@@ -122,21 +122,31 @@ body {
   border: 1px solid #ccc;
 }
 
-.calendar-cell.today {
+.calendar-cell {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+}
+
+.today {
   background-color: blue;
   color: white;
+  font-weight: bold;
   border-radius: 50%;
 }
 
 
+
 /* TIMER CONTAINER */
 #timer {
-  /* background-color: #f9fafb; */
-  /* padding: 2rem; */
-  /* border-radius: 1rem; */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  background-color: #f9fafb;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 320px;
-  margin: auto;
+  margin-top: 20px;
   font-family: 'Segoe UI', sans-serif;
 }
 
